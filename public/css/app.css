@@ -1,0 +1,82 @@
+.jumbotron {
+  display: flex;
+  width: 85%;
+  height: 500px;
+  background-color: #eee;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.jumbotron h2 {
+  padding-top: 50px;
+}
+
+.calender-container1 {
+  width: 50%;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+.calender-container2 {
+  width: 50%;
+  height: 100%;
+  background-color: bisque;
+}
+
+.container1 {
+  margin: auto;
+  margin-top: 50px;
+  background-color: #eee;
+  width: 80%;
+  height: 270px;
+}
+.container1 .btn-outline-secondary {
+  margin-top: 30px;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-around;
+}
+.btn-box .btns {
+  margin-top: 50px;
+  width: 10rem;
+  height: 50px;
+}
+
+.btn-s {
+  margin-top: 50px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.yearMonth {
+  padding-top: 15px;
+  font-weight: 600;
+}
+
+.calender-box {
+  margin: auto;
+  margin-top: 25px;
+  width: 406px;
+  height: 406px;
+  background-color: blue;
+}
+.calender-box .row {
+  margin: auto;
+  width: 100%;
+  height: 58px;
+  background-color: blueviolet;
+}
+.calender-box .row .cell {
+  width: 58px;
+  height: 58px;
+}
+.calender-box .row .cell :nth-child(0) {
+  background-color: blueviolet;
+}
+.calender-box .row .cell :nth-child(7n-6) {
+  background-color: blue;
+}/*# sourceMappingURL=app.css.map */
