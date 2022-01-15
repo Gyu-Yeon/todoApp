@@ -44,19 +44,6 @@
       </div>
     </nav>
 
-    <div class="container">
-      <% for(let i =0; i < data.length; i++){ %>
-      <div class="card">
-        <div class="card-header"><%= data[i].date %></div>
-        <div class="card-body">
-          <h5 class="card-title"><%= data[i].title %></h5>
-          <p class="card-text"><%= data[i].detail %></p>
-          <a href="#" class="btn btn-primary">Go detail</a>
-          <button class="btn btn-danger">Delete</button>
-        </div>
-      </div>
-      <% } %>
-    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

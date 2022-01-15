@@ -43,20 +43,24 @@
         </div>
       </div>
     </nav>
-
-    <div class="container">
-      <% for(let i =0; i < data.length; i++){ %>
-      <div class="card">
-        <div class="card-header"><%= data[i].date %></div>
-        <div class="card-body">
-          <h5 class="card-title"><%= data[i].title %></h5>
-          <p class="card-text"><%= data[i].detail %></p>
-          <a href="#" class="btn btn-primary">Go detail</a>
-          <button class="btn btn-danger">Delete</button>
+    <div class="container1">
+      <form action="/add" method="POST">
+        <div class="form-group">
+          <label>오늘의 할일</label>
+          <input type="text" class="form-control" name="title" />
         </div>
-      </div>
-      <% } %>
+        <div class="form-group">
+          <label>날짜</label>
+          <input type="text" class="form-control" name="date" />
+        </div>
+        <div class="form-group">
+          <label>내용</label>
+          <input type="text" class="form-control" name="detail" />
+        </div>
+        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+      </form>
     </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

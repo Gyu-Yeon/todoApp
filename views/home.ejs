@@ -123,9 +123,11 @@
       <div class="card">
         <div class="card-header"><%= data[i].date %></div>
         <div class="card-body">
-          <h5 class="card-title"><%= data[i].title %></h5>
+          <h5 class="card-title" ><%= data[i].title %></h5>
           <p class="card-text"><%= data[i].detail %></p>
           <a href="#" class="btn btn-primary">Go detail</a>
+          <button class="btn btn-danger delete" data-id="<%= data[i]._id %>">Delete </button>
+         <a href="/edit"></a> <div class="btn btn-success edit">Edit</div>
         </div>
       </div>
       <% } %>
@@ -143,12 +145,29 @@
     ></script>
     <script src="/public/js/jquery-3.6.0.min.js"></script>
     <script>  
+
      $('.yearMonth').click(()=>{
        $('.yearMonth').html('hi')
        console.log('hi')
      })
 
-
+  
+     
+     
+     $('.delete').click((e)=>{
+       
+       $.ajax({
+    method : 'DELETE',
+    url : '/delete',
+    data : {_id: e.target.dataset.id} 
+  }).done(function(){
+    console.log("deleted")
+    
+  }
+    
+  )
+     })
+    
 
      
     </script>

@@ -23,7 +23,6 @@ app.get("/", function (req, res) {
   db.collection("post")
     .find()
     .toArray(function (err, result) {
-      console.log(result);
       res.render("home.ejs", { data: result });
     });
 });
@@ -32,7 +31,6 @@ app.get("/lists", function (req, res) {
   db.collection("post")
     .find()
     .toArray(function (err, result) {
-      console.log(result);
       res.render("lists.ejs", { data: result });
     });
 });
@@ -41,6 +39,13 @@ app.get("/write", function (req, res) {
   res.render("write.ejs");
 });
 
+app.get("/detail/:id", function (req, res) {
+  res.render("detail.ejs");
+});
+
+app.get("/edit", function (req, res) {
+  res.render("edit.ejs");
+});
 app.post("/add", function (req, res) {
   db.collection("counter").findOne(
     { name: "게시물갯수" },
@@ -68,4 +73,14 @@ app.post("/add", function (req, res) {
       );
     }
   );
+});
+
+app.delete("/delete", function (req, res) {
+  console.log(req.body);
+  let num = parseInt(req.body._id);
+  db.collection("post").deleteOne({ _id: num }, function (err, result) {
+    if (err) {
+      return err;
+    } else console.log("good");
+  });
 });
