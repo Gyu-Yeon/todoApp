@@ -2,6 +2,23 @@
 
 # Today's lessons.
 
+
+## 1. How to make server in Node.js
+- write npm install express in your terminal( ` + ctrl)
+- make a new js file name server.js and write this on the top of file.
+<br> const express = require("express");
+<br> const app = express();
+- and write app.listen to connect to port you want.
+<br> ex)
+<br> app.listen("8080", function () {
+<br>      console.log("listening on 8080");
+<br>    });
+- write node server.js in your terminal.
+- open any browser and go to localhost:8080
+- if the page says cannot get / you are ready to start. 
+
+2022.01.15
+
 ## 1. How to send delete request to server from HTML.
 - first you need jquery cdn or jqeury script file.
 - write the ajax method between script tag.
@@ -21,6 +38,5 @@
 
 
  
+2022.01.16
 
-
-2022.01.15
