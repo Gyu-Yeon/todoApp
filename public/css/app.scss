@@ -1,37 +1,95 @@
-.jumbotron {
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+  font-family: "inter";
+}
+p,
+h4,
+h5,
+h3,
+h2,
+h1,
+span {
+  transform: rotate(0.04deg);
+}
+
+$mainColor: #1b58c0;
+$subColor1: #3a8ac3;
+$subColor2: #4ab4de;
+$subColor3: #eedbcb;
+
+.main-container {
+  background-color: $subColor2;
+  height: 100vh;
+}
+.navbar {
+  width: 100%;
   display: flex;
-  width: 85%;
-  height: 500px;
-  background-color: #eee;
-  margin: auto;
+  height: 5vh;
+  background-color: #4ab4de;
+  position: relative;
+  .nav-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #4ab4de;
+    text-align: center;
+    .app-title {
+      font-size: 4vh;
+      font-weight: 600;
+      color: $mainColor;
+    }
+    .app-menu {
+      position: absolute;
+      top: 0%;
+      right: 7.5%;
+      font-size: 4vh;
+    }
+  }
+}
+
+.hide-container {
+  display: flex;
+  transform: translateY(-100vh);
+  flex-flow: column;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: $subColor3;
   text-align: center;
-  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s;
   h2 {
-    padding-top: 50px;
+    margin-bottom: 10vh;
   }
 }
+.shut {
+  position: absolute;
+  top: 0%;
+  right: 1.5%;
+  font-size: 4vh;
+}
+.show {
+  transform: translateY(0px);
+  transition: all 2s;
+}
+// .jumbotron {
+//   display: flex;
+//   width: 100%;
+//   height: 500px;
+//   background-image: url(/public/img/back.jpg);
+//   background-repeat: no-repeat;
+//   background-size: 100%;
+//   background-position: 0%;
+//   text-align: center;
+//   opacity: 0.8;
+// }
 
-.calender-container1 {
-  width: 50%;
-  height: 100%;
-  background-color: aquamarine;
-}
-.calender-container2 {
-  width: 50%;
-  height: 100%;
-  background-color: bisque;
-}
-.container1 {
-  margin: auto;
-  margin-top: 50px;
-
-  background-color: #eee;
-  width: 80%;
-  height: 270px;
-  .btn-outline-secondary {
-    margin-top: 30px;
-  }
-}
 .btn-box {
   display: flex;
   justify-content: space-around;
@@ -46,35 +104,113 @@
   margin-top: 50px;
 }
 
-.container {
-  margin-top: 50px;
+@media screen and (max-width: 768px) {
 }
 
-.yearMonth {
-  padding-top: 15px;
-  font-weight: 600;
+@media screen and (max-width: 500px) {
 }
 
-.calender-box {
+.container1 {
   margin: auto;
-  margin-top: 25px;
-  width: 406px;
-  height: 406px;
-  background-color: blue;
-  .row {
-    margin: auto;
-    width: 100%;
-    height: 58px;
-    background-color: blueviolet;
-    .cell {
-      width: 58px;
-      height: 58px;
-      :nth-child(0) {
-        background-color: blueviolet;
-      }
-      :nth-child(7n-6) {
-        background-color: blue;
-      }
-    }
+  margin-top: 30px;
+  width: 85%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+  .btn-outline-dark {
+    background-color: white;
+    color: black;
   }
+  h4 {
+    color: black;
+    font-weight: 600;
+  }
+  .btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.scale {
+  height: 34vh;
+  .btn {
+    margin-top: 10px;
+  }
+}
+.rotate {
+  transition: all 1s;
+  transform: rotate(-45deg);
+}
+
+.form3 {
+  display: none;
+}
+.form2 {
+  display: none;
+}
+input[type="text"] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  border-bottom: 2px solid #4ab4de;
+
+  background-color: white;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+input:focus {
+  outline: none !important;
+}
+::placeholder {
+  color: black;
+  text-align: center;
+}
+
+.show2 {
+  display: block;
+}
+
+.list-container {
+  width: 85%;
+  height: 50vh;
+  background-color: #4ab4de;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.group-item {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  h3 {
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  h6 {
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  .btn {
+    margin-left: 20px;
+  }
+}
+
+.btn-box {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  float: right;
 }

@@ -1,37 +1,81 @@
-.jumbotron {
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+  font-family: "inter";
+}
+
+p,
+h4,
+h5,
+h3,
+h2,
+h1,
+span {
+  transform: rotate(0.04deg);
+}
+
+.main-container {
+  background-color: #4ab4de;
+  height: 100vh;
+}
+
+.navbar {
+  width: 100%;
   display: flex;
-  width: 85%;
-  height: 500px;
-  background-color: #eee;
-  margin: auto;
+  height: 5vh;
+  background-color: #4ab4de;
+  position: relative;
+}
+.navbar .nav-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #4ab4de;
   text-align: center;
-  margin-top: 50px;
 }
-.jumbotron h2 {
-  padding-top: 50px;
+.navbar .nav-box .app-title {
+  font-size: 4vh;
+  font-weight: 600;
+  color: #1b58c0;
 }
-
-.calender-container1 {
-  width: 50%;
-  height: 100%;
-  background-color: aquamarine;
-}
-
-.calender-container2 {
-  width: 50%;
-  height: 100%;
-  background-color: bisque;
+.navbar .nav-box .app-menu {
+  position: absolute;
+  top: 0%;
+  right: 7.5%;
+  font-size: 4vh;
 }
 
-.container1 {
-  margin: auto;
-  margin-top: 50px;
-  background-color: #eee;
-  width: 80%;
-  height: 270px;
+.hide-container {
+  display: flex;
+  transform: translateY(-100vh);
+  flex-flow: column;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background-color: #eedbcb;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s;
 }
-.container1 .btn-outline-secondary {
-  margin-top: 30px;
+.hide-container h2 {
+  margin-bottom: 10vh;
+}
+
+.shut {
+  position: absolute;
+  top: 0%;
+  right: 1.5%;
+  font-size: 4vh;
+}
+
+.show {
+  transform: translateY(0px);
+  transition: all 2s;
 }
 
 .btn-box {
@@ -48,35 +92,121 @@
   margin-top: 50px;
 }
 
-.container {
-  margin-top: 50px;
+.container1 {
+  margin: auto;
+  margin-top: 30px;
+  width: 85%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-weight: 600;
+  text-align: center;
+  color: black;
 }
-
-.yearMonth {
-  padding-top: 15px;
+.container1 .btn-outline-dark {
+  background-color: white;
+  color: black;
+}
+.container1 h4 {
+  color: black;
   font-weight: 600;
 }
+.container1 .btn {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 
-.calender-box {
-  margin: auto;
-  margin-top: 25px;
-  width: 406px;
-  height: 406px;
-  background-color: blue;
+.scale {
+  height: 34vh;
 }
-.calender-box .row {
+.scale .btn {
+  margin-top: 10px;
+}
+
+.rotate {
+  transition: all 1s;
+  transform: rotate(-45deg);
+}
+
+.form3 {
+  display: none;
+}
+
+.form2 {
+  display: none;
+}
+
+input[type=text] {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  border-bottom: 2px solid #4ab4de;
+  background-color: white;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+::-moz-placeholder {
+  color: black;
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  color: black;
+  text-align: center;
+}
+
+::placeholder {
+  color: black;
+  text-align: center;
+}
+
+.show2 {
+  display: block;
+}
+
+.list-container {
+  width: 85%;
+  height: 50vh;
+  background-color: #4ab4de;
   margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.group-item {
   width: 100%;
-  height: 58px;
-  background-color: blueviolet;
+  height: 100px;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
 }
-.calender-box .row .cell {
-  width: 58px;
-  height: 58px;
+.group-item h3 {
+  padding-left: 20px;
+  padding-top: 10px;
 }
-.calender-box .row .cell :nth-child(0) {
-  background-color: blueviolet;
+.group-item h6 {
+  padding-left: 20px;
+  padding-top: 10px;
 }
-.calender-box .row .cell :nth-child(7n-6) {
-  background-color: blue;
+.group-item .btn {
+  margin-left: 20px;
+}
+
+.btn-box {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  float: right;
 }/*# sourceMappingURL=app.css.map */

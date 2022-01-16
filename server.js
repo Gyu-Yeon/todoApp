@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const MongoClient = require("mongodb").MongoClient;
+const methodOverride = require("method-override");
+app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.use("/public", express.static("public"));
 app.use(express.urlencoded({ extended: true }));
@@ -40,12 +42,22 @@ app.get("/write", function (req, res) {
 });
 
 app.get("/detail/:id", function (req, res) {
-  res.render("detail.ejs");
+  console.log(req.params.id);
+  let id = parseInt(req.params.id);
+  db.collection("post").findOne({ _id: id }, function (err, result) {
+    console.log(result);
+    res.render("detail.ejs", { data: result });
+  });
 });
 
-app.get("/edit", function (req, res) {
-  res.render("edit.ejs");
+app.get("/edit/:id", function (req, res) {
+  let id = parseInt(req.params.id);
+  db.collection("post").findOne({ _id: id }, function (err, result) {
+    console.log(result);
+    res.render("edit.ejs", { data: result });
+  });
 });
+
 app.post("/add", function (req, res) {
   db.collection("counter").findOne(
     { name: "게시물갯수" },
@@ -68,11 +80,28 @@ app.post("/add", function (req, res) {
             }
           );
 
-          res.redirect("/write");
+          res.redirect("/");
         }
       );
     }
   );
+});
+
+app.put("/edit", function (req, res) {
+  db.collection("post").updateOne(
+    { _id: parseInt(req.body.id) },
+    {
+      $set: {
+        title: req.body.title,
+        date: req.body.date,
+        detail: req.body.detail,
+      },
+    },
+    function (err, result) {
+      console.log("EDITED");
+    }
+  );
+  res.redirect("/");
 });
 
 app.delete("/delete", function (req, res) {
