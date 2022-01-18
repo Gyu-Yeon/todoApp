@@ -33,7 +33,7 @@
         <div class="form-box">
         <form action="/add" method="POST">
           <div class="form1">
-            <input type="text" name="title" placeholder="Today's work" />
+            <input type="text" name="title" placeholder="NEW SCHEDULE" />
           </div>
           <div class="form2">
             <input type="text" name="date" placeholder="date" />
@@ -55,10 +55,8 @@
         <% for(let i = 0; i< data.length; i++){ %>
         <div class="group-item">  
             <h3><%= data[i].title %></h3>           
-              <h6><%= data[i].date %></h6>
-              <h6><%= data[i].detail %></h6>                     
-            <button class="btn btn-danger delete" data-id="<%= data[i]._id %>">
-              Delete
+              <h6><%= data[i].date %></h6>                           
+            <button class="btn btn-danger delete" data-id="<%= data[i]._id %>">              
             </button>
                                           
         </div>
