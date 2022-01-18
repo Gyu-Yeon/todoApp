@@ -30,6 +30,7 @@
       </div>
       <div class="container1">
         <h4>Quick Add</h4>
+        <div class="form-box">
         <form action="/add" method="POST">
           <div class="form1">
             <input type="text" name="title" placeholder="Today's work" />
@@ -40,33 +41,31 @@
           <div class="form3">
             <input type="text" name="detail" placeholder="detail" />
           </div>
+        </div>
+          <div class="btn-home">
           <button type="submit" class="btn btn-outline-dark">Submit</button>
         </form>
         <span class="plus-box"
           ><i class="fas fa-plus-circle plus-box1"></i
         ></span>
       </div>
-
+      </div>
+       
       <div class="list-container">
         <% for(let i = 0; i< data.length; i++){ %>
-        <div class="group-item">
-          <div>
-            <h3><%= data[i].title %></h3>
-
-            <div style="display: flex">
+        <div class="group-item">  
+            <h3><%= data[i].title %></h3>           
               <h6><%= data[i].date %></h6>
-              <h6><%= data[i].detail %></h6>
-            </div>
-          </div>
-          <div class="btn-box">
+              <h6><%= data[i].detail %></h6>                     
             <button class="btn btn-danger delete" data-id="<%= data[i]._id %>">
               Delete
             </button>
-            <button class="btn btn-secondary">Edit</button>
-          </div>
+                                          
         </div>
         <% } %>
       </div>
+
+     
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
@@ -80,15 +79,21 @@
     ></script>
     <script src="/public/js/jquery-3.6.0.min.js"></script>
     <script>
-      $(".delete").click((e) => {
+      $(".delete").click(function(e) {
+        let now = $(this);
         $.ajax({
           method: "DELETE",
           url: "/delete",
           data: { _id: e.target.dataset.id },
-        }).done(function () {
-          console.log("deleted");
+        }).done( (result)=> {
+          $(this).parent('div').fadeOut();
+          console.log('good')
+        }).catch(()=>{
+          console.log('he')
         });
       });
+
+   
 
       $(".app-menu").click(() => {
         if ($(".hide-container").hasClass("show")) {
@@ -106,23 +111,30 @@
         }
       });
 
+      function chg1() {
+        $(".form-box").css("height", "225px");
+      }
+      function chg2() {
+        $(".form-box").css("height", "80px");
+      }
       let counter = 0;
 
       $(".plus-box").click(() => {
         if (counter == 0) {
-          $(".container1").addClass("scale");
-          $(".form2").addClass("show2");
-          $(".form3").addClass("show2");
+          chg1();
+
           $(".plus-box1").addClass("rotate");
           counter++;
         } else if (counter == 1) {
-          $(".container1").removeClass("scale");
-          $(".form2").removeClass("show2");
-          $(".form3").removeClass("show2");
           $(".plus-box1").removeClass("rotate");
           counter--;
+          chg2();
         }
       });
+
+      $('.ss').click(()=>{
+$('.dd').fadeOut();
+      })
     </script>
   </body>
 </html>

@@ -108,8 +108,6 @@ app.delete("/delete", function (req, res) {
   console.log(req.body);
   let num = parseInt(req.body._id);
   db.collection("post").deleteOne({ _id: num }, function (err, result) {
-    if (err) {
-      return err;
-    } else console.log("good");
+    res.status(200).send({ message: "good" });
   });
 });
