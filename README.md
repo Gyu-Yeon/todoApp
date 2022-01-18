@@ -19,7 +19,7 @@
 
 2022.01.15
 
-## 1. How to send delete request to server from HTML.
+## 2. How to send delete request to server from HTML.
 - first you need jquery cdn or jqeury script file.
 - write the ajax method between script tag.
 <br> ex)
