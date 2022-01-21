@@ -108,6 +108,7 @@ a:hover {
   margin: auto;
   margin-top: 30px;
   width: 85%;
+  height: 340px;
   background-color: #f9b087;
   border-radius: 10px;
   border: 1px solid #f9b087;
@@ -126,16 +127,8 @@ a:hover {
   flex-flow: column;
 }
 .btn-home .btn {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 10px;
-}
-.btn-home .btn-outline-dark {
-  background-color: white;
-  width: 100px;
-  display: block;
-  margin: auto;
-  font-weight: 600;
-  color: black;
 }
 
 .form-box {
@@ -150,12 +143,13 @@ a:hover {
 }
 
 input[type=text] {
-  width: 90%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 95%;
+  padding: 12px 25px;
+  margin: 12px 0;
   box-sizing: border-box;
   border: none;
   color: white;
+  font-size: 14px;
   border-bottom: 2px solid white;
   background-color: #f9b087;
 }
@@ -182,102 +176,4 @@ input:focus {
 ::placeholder {
   color: white;
   text-align: center;
-}
-
-.list-container {
-  width: 85vw;
-  background-color: #ffc9a9;
-  margin: auto;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-
-.group-item {
-  width: 100%;
-  height: 90px;
-  background-color: #f9b087;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  position: relative;
-  color: white;
-}
-.group-item h3 {
-  padding: 30px;
-  padding-left: 3vw;
-  font-size: 1.4vw;
-  font-weight: 500;
-}
-.group-item h6 {
-  position: absolute;
-  top: 40%;
-  right: 25%;
-}
-.group-item .btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  display: block;
-  margin: auto;
-  position: absolute;
-  top: 35%;
-  right: 5%;
-  background-color: #d83752;
-  font-weight: 600;
-  color: white;
-}
-.group-item .edit {
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  display: block;
-  margin: auto;
-  position: absolute;
-  top: 35%;
-  right: 15%;
-  font-weight: 600;
-  color: white;
-}
-
-@media screen and (max-width: 1560px) {
-  .group-item h3 {
-    padding: 30px;
-    padding-left: 3vw;
-    font-size: 1.4vw;
-  }
-}
-@media screen and (max-width: 1560px) {
-  .group-item h3 {
-    padding: 30px;
-    padding-left: 3vw;
-    font-size: 1.4vw;
-  }
-}
-@media screen and (max-width: 1349px) {
-  .group-item h3 {
-    padding: 32px;
-    padding-left: 3vw;
-    font-size: 1.45vw;
-  }
-}
-@media screen and (max-width: 1349px) {
-  .group-item h3 {
-    padding: 35px;
-    padding-left: 3vw;
-    font-size: 1.8vw;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .group-item h3 {
-    padding: 35px;
-    padding-left: 3vw;
-    font-size: 2vw;
-  }
-}
-@media screen and (max-width: 685px) {
-  .group-item h3 {
-    padding: 35px;
-    font-size: 3vw;
-  }
-}/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=edit.css.map */

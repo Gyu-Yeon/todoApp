@@ -27,7 +27,7 @@ a:hover {
 }
 
 .main-container {
-  background-color: #ffc9a9;
+  background-color: #f9b087;
   height: 100vh;
   color: white;
 }
@@ -36,7 +36,7 @@ a:hover {
   width: 100%;
   display: flex;
   height: 5vh;
-  background-color: #f9b087;
+  background-color: #ffc9a9;
   position: relative;
   color: white;
 }
@@ -44,7 +44,7 @@ a:hover {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #ffc9a9;
+  background-color: #f9b087;
   color: white;
   text-align: center;
 }
@@ -108,9 +108,9 @@ a:hover {
   margin: auto;
   margin-top: 30px;
   width: 85%;
-  background-color: #f9b087;
+  background-color: #ffc9a9;
   border-radius: 10px;
-  border: 1px solid #f9b087;
+  border: 1px solid #ffc9a9;
   font-weight: 600;
   text-align: center;
   transition: all 1.5s;
@@ -157,7 +157,7 @@ input[type=text] {
   border: none;
   color: white;
   border-bottom: 2px solid white;
-  background-color: #f9b087;
+  background-color: #ffc9a9;
 }
 
 input {
@@ -186,7 +186,7 @@ input:focus {
 
 .list-container {
   width: 85vw;
-  background-color: #ffc9a9;
+  background-color: #f9b087;
   margin: auto;
   margin-top: 20px;
   border-radius: 10px;
@@ -195,7 +195,7 @@ input:focus {
 .group-item {
   width: 100%;
   height: 90px;
-  background-color: #f9b087;
+  background-color: #ffc9a9;
   margin-bottom: 10px;
   border-radius: 10px;
   text-align: center;
@@ -280,4 +280,4 @@ input:focus {
     padding: 35px;
     font-size: 3vw;
   }
-}/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=detail.css.map */
