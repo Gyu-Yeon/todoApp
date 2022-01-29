@@ -40,3 +40,12 @@
  
 2022.01.16
 
+## 3. How to make Login function.
+- npm install passport passport-local express-session
+<br> const passport = require('passport');
+<br> const LocalStrategy = require('passport-local').Strategy;
+<br> const session = require('express-session');
+
+<br> app.use(session({secret : '비밀코드', resave : true, saveUninitialized: false}));
+<br> app.use(passport.initialize());
+<br> app.use(passport.session()); 
