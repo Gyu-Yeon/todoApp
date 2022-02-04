@@ -33,6 +33,12 @@ $subColor3: #eedbcb;
   height: 100vh;
   color: white;
 }
+.login-container {
+  width: 300px;
+  height: 500px;
+  background-color: $subColor1;
+  margin: auto;
+}
 .navbar {
   width: 100%;
   display: flex;
@@ -81,7 +87,7 @@ $subColor3: #eedbcb;
 .shut {
   position: absolute;
   top: 0%;
-  right: 1.5%;
+  right: 7%;
   font-size: 4vh;
 }
 .show {

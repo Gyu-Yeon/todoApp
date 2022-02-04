@@ -24,7 +24,7 @@
       </div>
       <div class="navbar">
         <div class="nav-box">
-          <a href="/"> <h2 class="app-title">SCHEDULER</h2></a>
+          <a href="/"> <h2 class="app-title"><%=data[1].result.userName%> 's SCHEDULER</h2></a>
           <h2 class="app-menu"><i class="fas fa-bars"></i></h2>
         </div>
       </div>
@@ -41,6 +41,9 @@
           <div class="form3">
             <input type="text" name="detail" placeholder="detail" />
           </div>
+          <div class="form4" style="display: none;">
+            <input type="text" name="writer" value="<%=data[1].result._id%>" />
+          </div>
         </div>
           <div class="btn-home">
           <button type="submit" class="btn btn-outline-dark">Submit</button>
@@ -52,12 +55,12 @@
       </div>
        
       <div class="list-container">
-        <% for(let i = 0; i< data.length; i++){ %>
+        <% for(let i = 0; i< data[0].length; i++){ %>
         <div class="group-item">  
-          <a href="/detail/<%=data[i]._id%>"><h3><%= data[i].title %></h3></a>
-              <h6><%= data[i].date %></h6>             
-              <a href="/edit/<%=data[i]._id%>"><span class="edit"><i class="fas fa-edit"></i> </span></a>
-            <button class="btn delete" data-id="<%= data[i]._id %>"></button>                                          
+          <a href="/detail/<%=data[0][i]._id%>"><h3><%= data[0][i].title %></h3></a>
+              <h6><%= data[0][i].date %></h6>             
+              <a href="/edit/<%=data[0][i]._id%>"><span class="edit"><i class="fas fa-edit"></i> </span></a>
+            <button class="btn delete" data-id="<%= data[0][i]._id %>"></button>                                          
         </div>
         <% } %>
       </div>
@@ -129,9 +132,7 @@
         }
       });
 
-      $('.ss').click(()=>{
-$('.dd').fadeOut();
-      })
+    
     </script>
   </body>
 </html>

@@ -32,6 +32,13 @@ a:hover {
   color: white;
 }
 
+.login-container {
+  width: 300px;
+  height: 500px;
+  background-color: #f9b087;
+  margin: auto;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -81,7 +88,7 @@ a:hover {
 .shut {
   position: absolute;
   top: 0%;
-  right: 1.5%;
+  right: 7%;
   font-size: 4vh;
 }
 
