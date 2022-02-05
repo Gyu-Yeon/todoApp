@@ -76,7 +76,7 @@ app.get("/", logined, function (req, res) {
   console.log(req.user);
   let user = req.user;
   db.collection("post")
-    .find({ writer: "1" })
+    .find({ writer: user.result.userName })
     .toArray(function (err, result) {
       console.log(result);
       res.render("home.ejs", { data: [result, user] });

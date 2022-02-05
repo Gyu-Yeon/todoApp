@@ -18,9 +18,9 @@
     <div class="main-container">
       <div class="hide-container">
         <span class="shut"><i class="far fa-times-circle"></i></span>
-        <h2>Home</h2>
-        <h2>Wrtie</h2>
-        <h2>Lists</h2>
+       <a href="/"> <h2>Home</h2></a>
+       <a href="/write">  <h2>Wrtie</h2> </a>
+       <a href="/lists">  <h2>Lists</h2> </a>
       </div>
       <div class="navbar">
         <div class="nav-box">
@@ -42,7 +42,7 @@
             <input type="text" name="detail" placeholder="detail" />
           </div>
           <div class="form4" style="display: none;">
-            <input type="text" name="writer" value="<%=data[1].result._id%>" />
+            <input type="text" name="writer" value="<%=data[1].result.userName%>" />
           </div>
         </div>
           <div class="btn-home">
