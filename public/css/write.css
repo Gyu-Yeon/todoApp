@@ -47,6 +47,7 @@ a:hover {
   position: relative;
   color: white;
 }
+
 .navbar .nav-box {
   width: 100%;
   height: 100%;
@@ -55,11 +56,13 @@ a:hover {
   color: white;
   text-align: center;
 }
+
 .navbar .nav-box .app-title {
   font-size: 35px;
   font-weight: 600;
   color: white;
 }
+
 .navbar .nav-box .app-menu {
   position: absolute;
   top: 0%;
@@ -81,6 +84,7 @@ a:hover {
   align-items: center;
   transition: all 2s;
 }
+
 .hide-container h2 {
   margin-bottom: 10vh;
 }
@@ -101,6 +105,7 @@ a:hover {
   display: flex;
   justify-content: space-around;
 }
+
 .btn-box .btns {
   margin-top: 50px;
   width: 10rem;
@@ -120,9 +125,9 @@ a:hover {
   border: 1px solid #f9b087;
   font-weight: 600;
   text-align: center;
-  transition: all 1.5s;
   color: white;
 }
+
 .container1 h4 {
   color: white;
   font-weight: 600;
@@ -132,10 +137,12 @@ a:hover {
   display: flex;
   flex-flow: column;
 }
+
 .btn-home .btn {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
+
 .btn-home .btn-outline-dark {
   background-color: white;
   width: 100px;
@@ -143,11 +150,13 @@ a:hover {
   margin: auto;
   font-weight: 600;
   color: black;
+  margin-bottom: 20px;
+  margin-top: -20px;
 }
 
 .form-box {
   overflow-y: hidden;
-  height: 80px;
+  height: 240px;
   transition: all 1.5s;
 }
 
@@ -191,73 +200,18 @@ input:focus {
   text-align: center;
 }
 
-.list-container {
-  width: 85vw;
-  background-color: #ffc9a9;
-  margin: auto;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-
-.group-item {
-  width: 100%;
-  height: 90px;
-  background-color: #f9b087;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  position: relative;
-  color: white;
-}
-.group-item h3 {
-  padding: 30px;
-  padding-left: 3vw;
-  font-size: 1.4vw;
-  font-weight: 500;
-}
-.group-item h6 {
-  position: absolute;
-  top: 40%;
-  right: 25%;
-}
-.group-item .btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  display: block;
-  margin: auto;
-  position: absolute;
-  top: 35%;
-  right: 5%;
-  background-color: #d83752;
-  font-weight: 600;
-  color: white;
-}
-.group-item .edit {
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  display: block;
-  margin: auto;
-  position: absolute;
-  top: 35%;
-  right: 15%;
-  font-weight: 600;
-  color: white;
-}
-
 @media screen and (max-width: 1560px) {
   .group-item h3 {
     padding: 30px;
     padding-left: 3vw;
     font-size: 1.4vw;
   }
-
-  .app-title {
-    font-size: 5vw;
-    font-weight: 600;
-    color: white;
+}
+@media screen and (max-width: 1560px) {
+  .group-item h3 {
+    padding: 30px;
+    padding-left: 3vw;
+    font-size: 1.4vw;
   }
 }
 @media screen and (max-width: 1349px) {
@@ -266,11 +220,12 @@ input:focus {
     padding-left: 3vw;
     font-size: 1.45vw;
   }
-
-  .app-title {
-    font-size: 5vw;
-    font-weight: 600;
-    color: white;
+}
+@media screen and (max-width: 1349px) {
+  .group-item h3 {
+    padding: 35px;
+    padding-left: 3vw;
+    font-size: 1.8vw;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -297,4 +252,5 @@ input:focus {
     right: 7.5%;
     font-size: 30px;
   }
-}/*# sourceMappingURL=app.css.map */
+}
+/*# sourceMappingURL=write.css.map *//*# sourceMappingURL=write.css.map */

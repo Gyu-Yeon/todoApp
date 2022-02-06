@@ -88,15 +88,23 @@ app.get("/login", function (req, res) {
 });
 
 app.get("/lists", function (req, res) {
+  console.log(req.user);
+  let user = req.user;
   db.collection("post")
-    .find()
+    .find({ writer: user.result.userName })
     .toArray(function (err, result) {
-      res.render("lists.ejs", { data: result });
+      console.log(result);
+      res.render("lists.ejs", { data: [result, user] });
     });
 });
 
-app.get("/write", function (req, res) {
-  res.render("write.ejs");
+app.get("/write", logined, function (req, res) {
+  let user = req.user;
+  db.collection("post")
+    .find({ writer: user.result.userName })
+    .toArray(function (err, result) {
+      res.render("write.ejs", { data: user });
+    });
 });
 
 app.get("/detail/:id", function (req, res) {
