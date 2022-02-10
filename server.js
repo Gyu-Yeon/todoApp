@@ -52,7 +52,7 @@ passport.deserializeUser(function (id, done) {
 
 let db;
 MongoClient.connect(
-  "mongodb+srv://rbduschdl:love022775!@cluster0.lwlgw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongodb+srv://rbduschdl:{pw}@cluster0.lwlgw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   { useUnifiedTopology: true },
   function (err, client) {
     if (err) return console.log(err);
