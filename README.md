@@ -6,6 +6,7 @@
 
 <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=MongoDB&logoColor=white"> <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"> 
   
+## 기본 정보 
 - Node.js와 Express, MongoDB를 활용하여 RESTFUL한 웹앱 제작 프로젝트. 서버와 DB연동을 통하여 CRUD Operation 구현하였으며, Login 기능과 회원가입 기능을 추가하여 이 앱을 사용하는 유저마다 각자의 TodoList를 볼 수 있도록 제작.
 
 ## 사용 예제
