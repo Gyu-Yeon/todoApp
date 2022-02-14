@@ -9,12 +9,21 @@
 - Node.js와 Express, MongoDB를 활용하여 RESTFUL한 웹앱 제작 프로젝트. 서버와 DB연동을 통하여 CRUD Operation 구현하였으며, Login 기능과 회원가입 기능을 추가하여 이 앱을 사용하는 유저마다 각자의 TodoList를 볼 수 있도록 제작.
 
 ## 사용 예제
-
+- 로그인 페이지  
 <img src="1.jpg" width="720px" height="480px">
-- 로그인시 해당 유저의 TodoList를 보여주는 Mainpage로 이동.
+  
+  - 회원가입 페이지
 <img src="2.jpg" width="720px" height="480px">
+  - 메인 페이지
 
+<img src="3.jpg" width="720px" height="480px">
 
+  
+ 1. 로그인시 메인 페이지로 이동.
+ 2. Quick Add를 통해 할일 추가하기.
+ 3. 발행한 글의 오른쪽 문서 이모티콘 클릭시 글 수정 페이지로 이동하여 글 수정 가능.
+  
+    
 
 
 
