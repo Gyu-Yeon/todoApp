@@ -35,6 +35,6 @@
 ## 업데이트 내역
 
 * 1.0.0
-    * 배포: Google Cloud platform을 통해 버전 1.0.0 배포
+    * 배포: Google Cloud platform을 통해 버전 1.0.0 배포.
 
 
